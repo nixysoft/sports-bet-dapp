@@ -1,104 +1,110 @@
-# ⚽ Sportsbook 🏗️
+# ⚽ Sports Bet Dapp DApp 🏗️
 
-**Betting dapp using ChakraUI**
+**A Decentralized Betting Platform with ChakraUI**
 
-## How can I contribute to this build?
+## How It Works:
 
-- 🐣 Project being developed by [Newbie's Lounge](https://lulox.notion.site/Newbie-s-Lounge-68ea7c4c5f1a4ec29786be6a76516878)
-- 👷‍♀️ To view current development tasks, [check the Issues on the Github repo](https://github.com/luloxi/Sportsbook/issues).
-- 🧰 To chat with other buidlers about this project, [join Newbies Lounge Telegram group](https://t.me/+FwCZPG51UhwzOTZh)
-- 🛠️ To submit a PR (Pull Request), [fork and pull](https://github.com/susam/gitpr) a request to this repo.
-- 🐣 Make sure you know the ETH Tech Stack and understand [how to make a dApp using Scaffold-ETH 2](https://lulox.notion.site/Newbie-s-Lounge-68ea7c4c5f1a4ec29786be6a76516878).
+1️⃣ **Challenge:** One user (address) challenges another with a bet amount and selects a referee.
 
-## Dapp flow is:
+2️⃣ **Accept:** The challenged user accepts and places a matching bet.
 
-1. An address challenges another address and specifies a referee address and optionally a bet amount
-2. Challenged address accepts the challenge and bets the same amount as the proposer address
-3. Referee sets the game as started and challenge can't be canceled no more (suposedly, this coincides with a real life sports match)
-4. Referee sets the score and prize gets distributed accordingly (and then all to winner, or split if tie)
-5. (still not implemented) After results are in, a SVG NFT with the results of the match in the image can be claimed by all parts involved
+3️⃣ **Start:** The referee signals the start of the game, locking in the challenge (ideally when a real-life match begins).
 
-## Requirements
+4️⃣ **Score & Payout:** The referee records the score, and winnings are distributed based on the outcome (winner-takes-all or split if it's a tie).
 
-Before you begin, you need to install the following tools:
+5️⃣ *(Coming Soon)* **NFT Rewards:** After the match, all participants can claim an SVG NFT showing the results—a unique souvenir of the game!
 
-- [Node (v18 LTS)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+---
 
-## Quickstart
+## Setup Requirements
 
-To get started with Sportsbook, follow the steps below:
+Before you get started, make sure these are installed:
 
-1. Open a terminal, clone this repo, and install dependencies
+- **Node (v18 LTS)** – [Download](https://nodejs.org/en/download/)
+- **Yarn** (v1 or v2+) – [Installation guide for Yarn v1](https://classic.yarnpkg.com/en/docs/install/) or [Yarn v2+](https://yarnpkg.com/getting-started/install)
+- **Git** – [Download](https://git-scm.com/downloads)
 
-```
-git clone https://github.com/luloxi/sportsbook.git
-cd sportsbook
-yarn install
-```
+---
 
-2. Run a local network in the first terminal:
+## Quickstart Guide
 
-```
-yarn chain
-```
+Follow these steps to launch Sports Bet Dapp locally:
 
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development.
+1️⃣ **Clone the Repository & Install Dependencies:**
 
-3. On a second terminal, deploy the test contract:
+   ```bash
+   git clone https://github.com/nixysoft/sports-bet-dapp.git
+   cd sports-bet-dapp
+   yarn install
+   ```
 
-```
-yarn deploy
-```
+2️⃣ **Start the Local Network:**
 
-This command deploys a test smart contract to the local network.
+   ```bash
+   yarn chain
+   ```
 
-4. On a third terminal, start your NextJS app:
+   This command launches a local Ethereum network using Hardhat. You’ll use it for development and testing.
 
-```
-yarn start
-```
+3️⃣ **Deploy Contracts:**
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the Home or debug contracts in the frontend.
+   Open a second terminal and run:
 
-## Relevant files
+   ```bash
+   yarn deploy
+   ```
 
-- Smart contract `Sportsbook.sol` in `packages/hardhat/contracts`
-- Deployment scripts in `packages/hardhat/deploy`
-- Frontend files in `packages/nextjs/pages`
-- Types files in `packages/nextjs/types`
+   This deploys a test smart contract to the local network.
 
-## Completed product aims to
+4️⃣ **Run the App:**
 
-- Offer multiple ways of betting
-- Have a social network that allows you to find and challenge other teams on the same geographic zone
-- Generate an income for verified referees that help keep the platform fair
+   In a third terminal, start the Next.js frontend app:
 
-### Why is it useful
+   ```bash
+   yarn start
+   ```
 
-**For everyone:**
+   Access the app on `http://localhost:3000` to interact with the smart contract directly in the interface.
 
-- Showcase past matches on your profile as NFTs
-- Showcase stats and other information on profiles
-- Allow communication and coordination between users, teams and referees with the social part
+---
 
-**For users:**
+## Key Code Locations 📂
 
-- Social media app to find a team for the sport you select
-- Find a team on your geographic zone
+- **Smart Contract:** `Sports Bet Dapp.sol` in `packages/hardhat/contracts`
+- **Deployment Scripts:** `packages/hardhat/deploy`
+- **Frontend Files:** `packages/nextjs/pages`
+- **Type Definitions:** `packages/nextjs/types`
 
-**For teams:**
+---
 
-- Find and challenge other teams on the same geographic zone
-- Pay to location providers for matches against other teams (half each team)
-- Bet between teams on the outcome of a given match
+## Goals for the Final Product 🎯
 
-**For referees:**
+- **Betting Options:** Offer multiple ways to place bets.
+- **Social Features:** Let users find and challenge nearby teams.
+- **Referee Rewards:** Enable referees to earn by keeping games fair.
 
-- Act a trusted third party in exchange for payment
-- Get instant payment after setting the score of a match
+---
 
-## Development notes
+## Benefits 🎉
 
-You can check current development notes [here](https://lulox.notion.site/Sportsbook-4d353bea4260471f9fc60c1b8051be9b?pvs=4)
+**For All Users:**
+
+- Display NFTs of past matches on profiles 📈.
+- Share stats and data to highlight achievements 🏅.
+- Coordinate with other players, teams, and referees in-app.
+
+**For Individual Users:**
+
+- Find teams by sport and region 🌎.
+- Connect socially to organize local matches.
+
+**For Teams:**
+
+- Locate and challenge other local teams for matches.
+- Split location costs with other teams.
+- Place team bets on game outcomes 💰.
+
+**For Referees:**
+
+- Act as trusted third parties for matches ⚖️.
+- Earn immediate payment after scoring a match 💵.
